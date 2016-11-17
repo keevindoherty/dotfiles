@@ -11,6 +11,10 @@
 
 # i3lock binding
 bindsym Mod4+l exec --no-startup-id i3lock -c 000000
+# browser binding
+bindsym Mod1+i exec --no-startup-id chromium
+# shutter binding
+bindsym Mod1+p exec --no-startup-id shutter -s
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

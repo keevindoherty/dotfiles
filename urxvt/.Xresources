@@ -17,8 +17,8 @@ URxvt*scrollBar: false
 *.color9:       #af5f5f
 
 ! green
-*.color2:       #d75f5f
-*.color10:      #d75f5f
+*.color2:       #87af87
+*.color10:      #87af87
 
 ! yellow
 *.color3:       #afd7d7
