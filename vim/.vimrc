@@ -52,6 +52,7 @@ inoremap <esc> <NOP>
 " options for editing .txt files more smoothly
 " au BufRead,BufNewFile *.txt set spell wrap linebreak nolist textwidth=0 wrapmargin=0
 au BufRead,BufNewFile *.txt call ToggleWrap()
+au BufRead,BufNewFile *.txt set spell
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
   if &wrap
