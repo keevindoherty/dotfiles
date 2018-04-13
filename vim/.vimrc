@@ -23,7 +23,7 @@ if installedVimPlug
 endif
 " }}}"
 
-" Window splits ----------------------- {{{
+" jk escape ----------------------- {{{
 inoremap jk <esc>
 " }}}
 
@@ -83,8 +83,8 @@ function ToggleWrap()
 
     noremap  <buffer> <silent> k   gk
     noremap  <buffer> <silent> j   gj
-    inoremap <buffer> <silent> k   <C-o>gk
-    inoremap <buffer> <silent> j   <C-o>gj
+    "inoremap <buffer> <silent> k   <C-o>gk
+    "inoremap <buffer> <silent> j   <C-o>gj
   endif
 endfunction
 " autocmd Filetype txt nmap <silent> <j> gj
