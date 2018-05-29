@@ -315,7 +315,8 @@ you should place your code here."
   (setq-default evil-escape-key-sequence "jk")
 
   "Add paths to org files here"
-  (setq org-agenda-files (list "~/org/work.org"))
+  (setq org-agenda-files (list "~/org/work.org"
+                               "~/org/goals.org"))
 
 )
 
