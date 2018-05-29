@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     html
      python
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -316,7 +317,8 @@ you should place your code here."
 
   "Add paths to org files here"
   (setq org-agenda-files (list "~/org/work.org"
-                               "~/org/goals.org"))
+                               "~/org/goals.org"
+                               "~/org/home.org"))
 
 )
 
