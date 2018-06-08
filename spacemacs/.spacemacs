@@ -33,6 +33,7 @@ values."
    '(
      html
      python
+     latex
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -318,7 +319,11 @@ you should place your code here."
   "Add paths to org files here"
   (setq org-agenda-files (list "~/org/work.org"
                                "~/org/goals.org"
-                               "~/org/home.org"))
+                               "~/org/home.org"
+                               "~/org/personal.org"))
+  ;; wraps the lines in org-mode
+  (setq org-startup-truncated nil)
+
 ;;   (setq org-todo-keywords
 ;;         '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
@@ -336,6 +341,5 @@ you should place your code here."
                 ("MEETING" :foreground "forest green" :weight bold))))
 
   )
-
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
