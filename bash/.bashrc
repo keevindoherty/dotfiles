@@ -122,9 +122,14 @@ export PATH=$PATH:/home/kevin/sw/mendeley/bin/
 export ROSTPATH=/home/kevin/repos/adrost/
 export CAFFE_ROOT=/home/kevin/sw/caffe/
 # source /home/kevin/rrg/dependencies/setup.sh
-source /opt/ros/kinetic/setup.bash
+# source /opt/ros/kinetic/setup.bash
 export PATH=/home/kevin/repos/adrost/bin/:$PATH
 
 #export ROS_MASTER_URI=http://128.31.33.253:11311
 #export ROS_HOSTNAME=128.31.33.253
 #export TURTLEBOT3_MODEL=burger
+
+# added by Anaconda2 installer
+export PATH="/home/kevin/anaconda2/bin:$PATH"
+export PATH="/home/kevin/sw/julia/bin:$PATH"
+source /opt/ros/melodic/setup.bash
