@@ -115,15 +115,21 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Add CUDA binaries to path
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+# Add CUDA libs to library path
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/lib/cuda/extras/CUPTI/lib64"
+# Set CUDA home variable
 export CUDA_HOME=/usr/local/cuda
 export PATH=$PATH:/home/kevin/sw/mendeley/bin/
 export ROSTPATH=/home/kevin/repos/adrost/
-export CAFFE_ROOT=/home/kevin/sw/caffe/
+export CAFFE_ROOT=/home/kevin/repos/caffe/
 # source /home/kevin/rrg/dependencies/setup.sh
 # source /opt/ros/kinetic/setup.bash
 export PATH=/home/kevin/repos/adrost/bin/:$PATH
+export DSO_PATH=/home/kevin/repos/dso
+export PYTHONPATH=$HOME/repos/caffe/python:$PYTHONPATH
 
 #export ROS_MASTER_URI=http://128.31.33.253:11311
 #export ROS_HOSTNAME=128.31.33.253
@@ -131,5 +137,26 @@ export PATH=/home/kevin/repos/adrost/bin/:$PATH
 
 # added by Anaconda2 installer
 export PATH="/home/kevin/anaconda2/bin:$PATH"
+
 export PATH="/home/kevin/sw/julia/bin:$PATH"
+export PATH="/home/kevin/repos/g2o/bin:$PATH"
+export PATH="$PATH:$HOME/bin"
 source /opt/ros/melodic/setup.bash
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/kevin/repos/ORB_SLAM2/Examples/ROS
+export G2O_ROOT=~/repos/g2o/
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/kevin/anaconda2/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/kevin/anaconda2/etc/profile.d/conda.sh" ]; then
+#         . "/home/kevin/anaconda2/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/kevin/anaconda2/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+
