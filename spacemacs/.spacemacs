@@ -313,6 +313,10 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
+  ;; Automatically do spell checking on LaTeX files
+  (with-eval-after-load 'tex
+    (add-hook 'TeX-mode-hook 'flyspell-buffer))
+
   )
 
 (defun dotspacemacs/user-config ()
@@ -373,9 +377,6 @@ you should place your code here."
   (defun my-c-setup ()
     (c-set-offset 'innamespace [0]))
   (add-hook 'c++-mode-hook 'my-c-setup)
-
-  ;; Automatically do spell checking on LaTeX files
-  (add-hook 'TeX-mode-hook 'flyspell-buffer)
 
 
   )
