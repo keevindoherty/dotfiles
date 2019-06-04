@@ -378,6 +378,9 @@ you should place your code here."
     (c-set-offset 'innamespace [0]))
   (add-hook 'c++-mode-hook 'my-c-setup)
 
+  ;; Add "SPC o w" to open file in new window
+  (spacemacs/declare-prefix "o" "own-menu")
+  (spacemacs/set-leader-keys "ow" `ido-find-file-other-frame)
 
   )
 ;; Do not write anything past this comment. This is where Emacs will
