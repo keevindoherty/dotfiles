@@ -313,7 +313,7 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
-  ;; Automatically do spell checking on LaTeX files
+  "Automatically do spell checking on LaTeX files"
   (with-eval-after-load 'tex
     (add-hook 'TeX-mode-hook 'flyspell-buffer))
 
@@ -335,16 +335,19 @@ you should place your code here."
                                "~/org/goals.org"
                                "~/org/home.org"
                                "~/org/personal.org"))
-  ;; wraps the lines in org-mode
+
+  "Wraps the lines in org-mode"
   (setq org-startup-truncated nil)
 
   ;;   (setq org-todo-keywords
   ;;         '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
+  "Set org keywords"
   (setq org-todo-keywords
         (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
                 (sequence "WAIT(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
 
+  "Set org keyword appearances"
   (setq org-todo-keyword-faces
         (quote (("TODO" :foreground "red" :weight bold)
                 ("NEXT" :foreground "blue" :weight bold)
@@ -354,10 +357,11 @@ you should place your code here."
                 ("CANCELLED" :foreground "forest green" :weight bold)
                 ("MEETING" :foreground "forest green" :weight bold))))
 
-  ;; This is necessary to properly use BibTex references in org mode
+  "This is necessary to properly use BibTex references in org mode"
   (setq org-latex-pdf-process '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
 
-;; === clang ===
+  "Not in use, delete at some point"
+  ;; === clang ===
   ;; Bind clang-format-region to C-M-tab in all modes:
   ;; (global-set-key [C-M-tab] 'clang-format-region)
   ;; ;; Bind clang-format-buffer to tab on the c++-mode only:
@@ -374,15 +378,18 @@ you should place your code here."
   ;;            ("C-i" . clang-format)
   ;;            ("C-." . my-imenu)
   ;;            ("M-o" . cff-find-other-file))
+
+  "Ensure that declaring a namespace in c++ doesn't cause indentation"
   (defun my-c-setup ()
     (c-set-offset 'innamespace [0]))
   (add-hook 'c++-mode-hook 'my-c-setup)
 
-  ;; Add "SPC o w" to open file in new window
+  "Add `SPC o w` to open file in new window"
   (spacemacs/declare-prefix "o" "own-menu")
   (spacemacs/set-leader-keys "ow" `ido-find-file-other-frame)
 
   )
+
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
